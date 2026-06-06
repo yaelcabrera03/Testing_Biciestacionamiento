@@ -10,7 +10,7 @@ time.sleep(10)
 
 #A - verificar
 
-assert "Login" in driver.title
+assert "PIMAC" in driver.title
 print("El sistema cargó correctamente")
 print("Titulo: ".driver.title)
 
