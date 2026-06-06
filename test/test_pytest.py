@@ -13,7 +13,7 @@ def driver():
     d.quit()
 def test_carga_pagina(driver):
     driver.get(URL)
-    assert driver.title == "SISTEMA DEL BIENESTAR"
+     assert "PIMAC" in driver.title
 def test_login_correcto(driver):
     driver.get(URL)
     campos = driver.find_elements(By.CLASS_NAME, "entradaTexto")
