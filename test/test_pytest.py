@@ -10,7 +10,7 @@ URL = "https://yaelcabrera03.github.io/IS2026-2-Sistema-de-biciestacionamiento-/
 def driver():
     d = webdriver.Chrome()
     yield d
-    d.quit
+    d.quit()
 def test_carga_pagina(driver):
     driver.get(URL)
     assert driver.title == "SISTEMA DEL BIENESTAR"
