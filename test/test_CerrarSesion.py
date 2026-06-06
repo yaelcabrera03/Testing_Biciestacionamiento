@@ -14,13 +14,10 @@ def driver():
     d.quit()
 
 def test_cerrar_sesion(driver):
-
     # A - Preparar
     driver.get(URL)
-
     # A - Ejecutar login
     campos = driver.find_elements(By.CLASS_NAME, "entradaTexto")
-
     campos[0].send_keys("estudiante@gmail.com")
     campos[1].send_keys("123456")
 
@@ -30,7 +27,6 @@ def test_cerrar_sesion(driver):
 
     # A - Ejecutar cerrar sesión
     driver.find_element(By.ID, "cerrarSesion").click()
-
     time.sleep(3)
 
     # Crear carpeta de evidencias
@@ -41,6 +37,5 @@ def test_cerrar_sesion(driver):
 
     # Verificar
     assert "index.html" in driver.current_url
-
     print("Sesión cerrada correctamente")
     
